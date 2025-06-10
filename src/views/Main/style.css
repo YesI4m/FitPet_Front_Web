@@ -1,0 +1,86 @@
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.5s ease;
+}
+
+.running {
+  height: 100vh;
+  background: #ffffff;
+  color: #000;
+  background-image: url('../../assets/image/clouds.png'), url('../../assets/icons/activity4.png'), url('../../assets/icons/mainpagedog1.png'), url('../../assets/icons/diet_exercise.png');
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: left 800px bottom 800px , left 50px bottom 50px, left 280px bottom 120px , left 750px bottom 430px;
+  background-size: 300px , 400px, 250px , 100px;
+  transition: background-position 0.1s ease-out;
+}
+
+.aimeal {
+  background: rgb(242, 247, 255);
+  color: #333;
+  background-image:
+    url('../../assets/icons/diet_exercise.png'),
+    url('../../assets/icons/diet_normal.png'),
+    url('../../assets/icons/diet_keto.png'),
+    url('../../assets/icons/diet_vegan.png');
+  background-repeat: no-repeat;
+  background-position:
+    left 150px bottom var(--y1, 450px),
+    left 300px bottom var(--y2, 500px),
+    left 750px bottom var(--y3, 450px),
+    left 900px bottom var(--y4, 500px);
+  background-size: 250px, 240px, 200px, 240px;
+  transition: background-position 0.2s ease-out;
+}
+
+.app-preview {
+  background: rgb(121, 156, 209);
+  color: #ffffff;
+}
+
+.download {
+  background: #3c6dcf;
+  color: white;
+  background-image: url('../../assets/icons/QR.png');
+  background-repeat: no-repeat;
+  background-position: left 50%;
+  background-size: 250px;
+  gap: 100px;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.qr-slide {
+  position: relative;
+  margin-top: 50px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.qr-slide.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.qr-slide img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

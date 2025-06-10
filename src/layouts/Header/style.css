@@ -1,0 +1,152 @@
+#header{
+    padding: 20px 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 1;;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-container{
+    width: 1280px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.header-logo-box{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+
+.header-logo{
+    color: rgba(0, 0, 0, 1);
+    align-content: center;
+    font-family: GimhaeGaya;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.4px;
+}
+
+.header-right-box{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position:relative;
+}
+
+.header-search-input-box{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 43px;
+    
+    padding: 0 10px 0 12px;
+
+    width: 223px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-search-input{
+    flex: 1;
+
+    border: none;
+    background: none;
+    outline: none;
+
+    color: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.download-button{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 27px;
+    height: 27px;
+    margin-right: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+
+    color: rgba(0, 0, 0, 0.5);
+
+    cursor: pointer;
+}
+
+.QR-code-button{
+    position:absolute;
+
+    z-index: 1;
+    animation: slideDownFade 0.4s ease-out forwards;
+    opacity: 0; /* 초기값 필요 (React 상태 반영용) */
+    transform: translateY(-20px);
+    
+
+    right :  0px;
+    top: 60px;
+
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.QR-icon{
+    width: 400px;
+    height: 400px;
+    
+    animation: slideDownFade 0.2s ease-out forwards;
+    opacity: 0; /* 초기값 필요 (React 상태 반영용) */
+    transform: translateY(-20px);
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(0, 0, 0, 1);
+}
+
+.QR-description{
+    width: 400px;
+    height:40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: GimhaeGaya;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 90%;
+    letter-spacing: -0.4px;
+    padding-bottom: 10px;;
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
